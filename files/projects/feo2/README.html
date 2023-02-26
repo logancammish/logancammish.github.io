@@ -1,0 +1,55 @@
+<h1 id="feo2-alternatively-iron-oxide-">FeO2 (alternatively: iron-oxide)</h1>
+<p>A statically typed interpreted programming language created entirely in Rust.</p>
+<h2 id="dependencies-as-shown-in-cargo-toml-">Dependencies (as shown in <code>Cargo.toml</code>)</h2>
+<ul>
+<li><code>colored 2</code></li>
+<li><code>once_cell 1.17.1</code></li>
+</ul>
+<h2 id="file-extensions">File extensions</h2>
+<ul>
+<li><code>.feo2</code> - FeO2 source file</li>
+<li><code>.iroxlib</code> - FeO2 libary source file</li>
+<li><code>.iroxdf</code> - FeO2 data file (similar to <code>Cargo.toml</code> in Rust projects)</li>
+</ul>
+<h2 id="syntax-example">Syntax example</h2>
+<p>FeO2 source file:</p>
+<pre><code class="lang-js">using <span class="hljs-class"><span class="hljs-keyword">lib</span> <span class="hljs-title">standard</span>;</span>
+using <span class="hljs-class"><span class="hljs-keyword">lib</span> <span class="hljs-title">string</span>;</span>
+
+func loop(interations[int]) &gt;[string] {
+    <span class="hljs-keyword">for</span> i[int] in range(<span class="hljs-number">1</span>, interations) {
+        <span class="hljs-symbol">print:</span> to_str(<span class="hljs-number">1</span>) + <span class="hljs-string">"\n"</span>; <span class="hljs-regexp">//</span> -&gt; <span class="hljs-string">"1"</span>
+        <span class="hljs-symbol">println:</span> <span class="hljs-number">1</span>; <span class="hljs-regexp">//</span> -&gt; <span class="hljs-string">"1"</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> string.new(<span class="hljs-string">"Success!"</span>);
+}
+
+func main() {
+    <span class="hljs-symbol">println:</span> loop(<span class="hljs-number">5</span>);
+}
+</code></pre>
+<p>FeO2 library source file:</p>
+<pre><code class="lang-lua">OUT {
+<span class="hljs-meta">#func print,</span>
+<span class="hljs-meta">#func println,</span>
+<span class="hljs-meta">#number version = 001,</span>
+};
+DEPEND {
+<span class="hljs-meta">#example="0.0.1",</span>
+};
+INFO {
+<span class="hljs-meta">#version="0.0.1,</span>
+};
+</code></pre>
+<p>FeO2 data file:</p>
+<pre><code class="lang-py">[<span class="hljs-symbol">'throw_expections</span>'] = true<span class="hljs-comment">;</span>
+[<span class="hljs-symbol">'information</span>'] = [
+    (<span class="hljs-name">name</span>) = <span class="hljs-string">"example"</span>,
+    (<span class="hljs-name">version</span>) = <span class="hljs-string">"0.0.1"</span>,
+    (<span class="hljs-name">ironox_version</span>) = <span class="hljs-string">"0.0.1"</span>,
+]<span class="hljs-comment">;</span>
+[<span class="hljs-symbol">'dependencies</span>'] = [
+    (<span class="hljs-string">"example_external_repository"</span>) = <span class="hljs-string">"version"</span>,
+]<span class="hljs-comment">;</span>
+</code></pre>
