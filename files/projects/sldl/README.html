@@ -1,0 +1,62 @@
+<h1 id="-rust-standard-library-definition-language">(Rust) Standard Library Definition Language</h1>
+<p><a href="https://github.com/logancammish/sldl/actions/workflows/rust.yml"><img src="https://github.com/logancammish/sldl/actions/workflows/rust.yml/badge.svg" alt="build"></a></p>
+<p>A language designed for use in libraries to define depedencies, outputs, version information and more.
+Specifically designed for Rust or Rust-based languages.</p>
+<p>Uses the file extension <code>.sldl</code>.</p>
+<h2 id="installation">Installation</h2>
+<p>Installation EXE can be found under releases. There is currently no official Linux or MacOS support.</p>
+<h2 id="dependencies-as-shown-in-cargo-toml-">Dependencies (as shown in <code>Cargo.toml</code>):</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2 id="support">Support</h2>
+<p>Has libraries for the following languages: <a href="!--([Rust](https://logancammish.github.io/response))--">!--([Rust](https://logancammish.github.io/response))--</a></p>
+<p>Built-in support for the following languages: <a href="https://github.com/logancammish/FeO2-lang">FeO2</a>, Rust, Lua, C/C++</p>
+<h2 id="syntax-example">Syntax example</h2>
+<pre><code class="lang-sldl">OUT {
+  FROM  <span class="hljs-string">"./example1.rs"</span>:
+    #func print(<span class="hljs-built_in">string</span> msg);
+    #func println(<span class="hljs-built_in">string</span> msg);
+    #func printf(<span class="hljs-built_in">string</span> <span class="hljs-built_in">data</span>, tuple msg);. 
+    &amp; <span class="hljs-keyword">Take</span> <span class="hljs-number">3</span> functions &amp;
+  FROM <span class="hljs-string">"./example2.rs"</span>:
+    #string <span class="hljs-built_in">DATA</span>;. 
+    &amp; <span class="hljs-keyword">Take</span> <span class="hljs-built_in">string</span> <span class="hljs-string">"DATA"</span> &amp;
+  <span class="hljs-keyword">TAKE</span> <span class="hljs-string">"./example3.rs"</span>. 
+    &amp; <span class="hljs-keyword">Take</span> <span class="hljs-literal">all</span> <span class="hljs-built_in">data</span> &amp;
+  FROM NOWHERE:
+    #string = <span class="hljs-string">"one two three"</span>.
+    #number32 = <span class="hljs-number">34.</span>
+    &amp; Create your own <span class="hljs-built_in">variable</span> &amp;
+}.
+DEPEND { 
+  <span class="hljs-string">"examplerepo"</span>=<span class="hljs-string">"0.0.1"</span>.
+}.
+INFO {
+  version = <span class="hljs-string">"0.0.1"</span>.
+  <span class="hljs-built_in">date</span> = <span class="hljs-string">"02/03/2023"</span>.
+  published = <span class="hljs-string">"02/03/2023"</span>.
+  public_release = <span class="hljs-literal">false</span>.
+}.
+</code></pre>
+<p>Utilizing <code>interpreter::main()</code> you should get the result (in your language):</p>
+<pre><code>{ [<span class="hljs-string">"OUT"</span>] = {
+    print(),
+    println(),
+    printf(),
+    <span class="hljs-string">"ABC"</span>,
+    ABC,
+    <span class="hljs-string">"one two three"</span>,
+    <span class="hljs-number">34</span>
+  },
+  [<span class="hljs-string">"DEPEND"</span>] = {
+    [<span class="hljs-string">"examplerepo"</span>, <span class="hljs-string">"0.0.1"</span>],
+  },
+  [<span class="hljs-string">"INFO"</span>] = { 
+    <span class="hljs-number">0.0</span>.1, <span class="hljs-string">"02/03/2023"</span>, <span class="hljs-string">"02/03/2023"</span>, <span class="hljs-literal">false</span>
+  }
+}
+</code></pre><p>Please note: INFO returns an array. The default array indexs are:
+<code>0 = version</code>, <code>1 = date</code>, <code>2 = published</code>, <code>3  = public_release</code> (+1 for Lua)</p>
+<h2 id="license">License</h2>
+<p>This uses the Unlicense License. This is released into the public domain. You may &quot;copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.&quot; I would appreciate credit, but it is not required.</p>
