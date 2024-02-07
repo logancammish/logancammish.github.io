@@ -1,19 +1,19 @@
 #index_body {
-  background-color: rgb(195, 210, 215);
+  background-color: #111212;
 }
 
 #titles {
-  color: #1C1F1F;
+  color: #dfe6e6;
   font-family: 'Roboto';
 }
 
 #information {
-  color: #1C1F1F;
+  color: #dfe6e6;
   font-family: 'Open Sans';
 }
 
 #information2  {
-  color: #1C1F1F;
+  color: #dfe6e6;
   font-family: 'Open Sans';
   text-align: center;
 }
