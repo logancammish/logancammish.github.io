@@ -1,0 +1,27 @@
+#index_body {
+  background-color: rgb(195, 210, 215);
+}
+
+#titles {
+  color: #1C1F1F;
+  font-family: 'Roboto';
+}
+
+#information {
+  color: #1C1F1F;
+  font-family: 'Open Sans';
+}
+
+#information2  {
+  color: #1C1F1F;
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+a{
+  color: black;
+  font-family: 'Roboto';
+}
+
+b{
+}
