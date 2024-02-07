@@ -1,26 +1,34 @@
 body {
-  background-color: rgb(17, 18, 18);
+    background-color: rgb(17, 18, 18);
 }
 
 h3 {
-  color: rgb(223, 230, 230);
-  font-family: 'Roboto';
+    color: rgb(223, 230, 230);
+    font-family: monospace;
+    font-size: larger;
+}
+
+h2 {
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: large;
 }
 
 p {
-  color: rgb(223, 230, 230);
-  font-family: 'Open Sans';
+    color: rgb(223, 230, 230);
+    font-family: 'Open Sans';
+    font-size: small;
 }
 
 #information2  {
-  color: #dfe6e6;
-  font-family: 'Open Sans';
-  text-align: center;
+    color: #dfe6e6;
+    font-family: 'Open Sans';
+    text-align: center;
 }
 
 a {
-  color: rgb(223, 230, 230);
-  font-family: 'Roboto';
+    color: rgb(223, 230, 230);
+    font-family: 'Roboto';
 }
 
 b{
