@@ -1,14 +1,14 @@
 body {
-  background-color: #111212;
+  background-color: rgb(17, 18, 18);
 }
 
 h3 {
-  color: #dfe6e6;
+  color: rgb(223, 230, 230);
   font-family: 'Roboto';
 }
 
 p {
-  color: #dfe6e6;
+  color: rgb(223, 230, 230);
   font-family: 'Open Sans';
 }
 
@@ -19,7 +19,7 @@ p {
 }
 
 a {
-  color: black;
+  color: rgb(223, 230, 230);
   font-family: 'Roboto';
 }
 
