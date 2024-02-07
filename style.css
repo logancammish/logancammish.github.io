@@ -2,12 +2,12 @@
   background-color: #111212;
 }
 
-#titles {
+h3 {
   color: #dfe6e6;
   font-family: 'Roboto';
 }
 
-#information {
+p {
   color: #dfe6e6;
   font-family: 'Open Sans';
 }
