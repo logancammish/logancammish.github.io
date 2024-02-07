@@ -1,4 +1,4 @@
-#index_body {
+body {
   background-color: #111212;
 }
 
@@ -18,7 +18,7 @@ p {
   text-align: center;
 }
 
-a{
+a {
   color: black;
   font-family: 'Roboto';
 }
