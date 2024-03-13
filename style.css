@@ -2,6 +2,24 @@ body {
     background-color: rgb(17, 18, 18);
 }
 
+h1 {
+    color: rgb(223, 230, 230);
+    font-family: monospace;
+    font-size: larger;
+}
+
+li {
+    color: rgb(223, 230, 230);
+    font-family: monospace;
+    font-size: larger;
+}
+
+code {
+    color: rgb(223, 230, 230);
+    font-family: monospace;
+    font-size: larger;
+}
+
 h3 {
     color: rgb(223, 230, 230);
     font-family: monospace;
