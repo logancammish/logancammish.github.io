@@ -1,17 +1,30 @@
 <h1 id="coffee-game">coffee-game</h1>
-<p><a href="https://github.com/logancammish/coffee-game/actions/workflows/rust.yml"><img src="https://github.com/logancammish/coffee-game/actions/workflows/rust.yml/badge.svg" alt="build"></a></p>
 <p>Game made in Rust using the Coffee crate. </p>
 <p>A player uses WASD to move around and must avoid hitting the other player, who uses the arrow keys. The player who uses the red keys is much faster but has lower health. The objective is to hit the other play while in control until they die.</p>
 <p>Webpage: <a href="https://logancammish.github.io/coffeegame">https://logancammish.github.io/coffeegame</a> </p>
 <h1 id="installation">Installation</h1>
+<p><a href="https://github.com/logancammish/coffee-game/actions/workflows/windows.yml"><img src="https://github.com/logancammish/coffee-game/actions/workflows/windows.yml/badge.svg" alt="build-windows"></a>
+<a href="https://github.com/logancammish/coffee-game/actions/workflows/macos.yml"><img src="https://github.com/logancammish/coffee-game/actions/workflows/macos.yml/badge.svg" alt="build-macos"></a>
+<a href="https://github.com/logancammish/coffee-game/actions/workflows/linux.yml"><img src="https://github.com/logancammish/coffee-game/actions/workflows/linux.yml/badge.svg" alt="build-linux"></a></p>
 <h3 id="-ins-windows-ins-"><ins>Windows:</ins></h3>
 <ol>
 <li>Head over to <a href="https://github.com/logancammish/coffee-game/releases/latest">here</a> and download your executable</li>
 </ol>
-<h3 id="-ins-others-ins-"><ins>Others:</ins></h3>
+<h3 id="-ins-ubuntu-linux-ins-"><ins>Ubuntu Linux:</ins></h3>
+<p>The following will create the binary in the /usr/bin directory (untested, paste into terminal):</p>
+<pre><code>curl --proto <span class="hljs-string">'=https'</span> --tlsv1.<span class="hljs-number">2</span> -sSf http<span class="hljs-variable">s:</span>//<span class="hljs-keyword">sh</span>.rustup.rs | <span class="hljs-keyword">sh</span>
+sudo apt install libudev-dev -<span class="hljs-keyword">y</span>
+git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/logancammish/coffee-game.git
+<span class="hljs-keyword">cd</span> coffee-game
+cargo build --release
+sudo <span class="hljs-keyword">cp</span> ./target/release/game /usr/bin
+<span class="hljs-keyword">cd</span> ..
+rm coffee-game
+</code></pre><h3 id="-ins-others-ins-"><ins>Others:</ins></h3>
 <ol>
-<li>Clone this github repository (with git: <code>git clone https://github.com/logancammish/cli-file-reader-remake.git</code>)</li>
-<li>Install Rust <a href="https://www.rust-lang.org/tools/install">here</a></li>
+<li>Install Rust <a href="https://www.rust-lang.org/tools/install">here</a> or with <code>curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh</code> on Unix-based systems (MacOS, Linux...)</li>
+<li>If you are trying to use this on Linux, you need the <code>libudev-dev</code> package </li>
+<li>Clone this github repository (with git: <code>git clone https://github.com/logancammish/coffee-game.git</code>)</li>
 <li>Open the repository location in a terminal, and run <code>cargo build --release</code></li>
 <li>You will find your executable in <code>/target/release</code></li>
 </ol>
